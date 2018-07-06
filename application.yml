@@ -22,5 +22,5 @@ security:
   jwt:
     token:
       secret: s3cr3t
-      expires-in: 3600000
+      validity: 3600000
 
