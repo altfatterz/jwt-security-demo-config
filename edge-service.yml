@@ -7,7 +7,7 @@ zuul:
       path: /login
       serviceId: auth-service
     customer-service:
-      path: /customers/**
+      path: /customers
       serviceId: customer-service
   # otherwise the Authorization header is not returned
   sensitive-headers:
