@@ -1,2 +1,13 @@
 server:
   port: 8080
+
+zuul:
+  routes:
+    auth-service:
+      path: /login
+      serviceId: auth-service
+    customer-service:
+      path: /customers/**
+      serviceId: customer-service
+  # otherwise the Authorization header is not returned
+  sensitive-headers:
