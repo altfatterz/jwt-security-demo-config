@@ -5,3 +5,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:admin@localhost:8761/eureka/
+
+  instance:
+    metadata-map:
+      # see DiscoveryClientConfigServiceBootstrapConfiguration#refresh
+      user: ${spring.security.user.name}
+      password: ${spring.security.user.password}
