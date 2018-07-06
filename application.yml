@@ -1,5 +1,19 @@
+management:
+  endpoints:
+    web.exposure.include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 spring:
   security:
     user:
       name: admin
       password: admin
+
+# needed for Spring Boot Admin to register the service
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
