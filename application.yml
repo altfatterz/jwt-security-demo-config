@@ -8,8 +8,9 @@ management:
 spring:
   security:
     user:
-      name: admin
-      password: admin
+      name: manager
+      password: manager
+      roles: MANAGER
 
 eureka:
   instance:
